@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 app.get("/url", (req, res, next) => {
   //res.json(["Tony","Lisa","Michael","Ginger","Food"]);
   const { spawn } = require('child_process');
-  const pyProcess = spawn('python', ['../pythonCode/test.py', "Bryan"]);
+  const pyProcess = spawn('python', ['../pythonCode/main.py', "buzz"]);
 
   pyProcess.stdout.on('data', (data) => {
     console.log(data.toString());
